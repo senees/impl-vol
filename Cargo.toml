@@ -1,6 +1,6 @@
 [package]
 name = "impl-vol"
-version = "0.0.4"
+version = "0.0.5"
 authors = ["seenees <code@seenees.de>"]
 description = "Implied volatility"
 documentation = "https://docs.rs/impl-vol"
