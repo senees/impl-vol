@@ -1,0 +1,22 @@
+[package]
+name = "impl-vol"
+version = "0.0.4"
+authors = ["seenees <code@seenees.de>"]
+description = "Implied volatility"
+documentation = "https://docs.rs/impl-vol"
+repository = "https://github.com/seenees/impl-vol.git"
+license = "MIT"
+edition = "2021"
+
+[features]
+default = [
+  "ENABLE_SWITCHING_THE_OUTPUT_TO_ITERATION_COUNT",
+  "ENABLE_CHANGING_THE_HOUSEHOLDER_METHOD_ORDER"
+]
+
+ENABLE_SWITCHING_THE_OUTPUT_TO_ITERATION_COUNT = []
+ENABLE_CHANGING_THE_HOUSEHOLDER_METHOD_ORDER = []
+DO_NOT_OPTIMISE_NORMALISED_BLACK_IN_REGIONS_3_AND_4_FOR_CODYS_FUNCTIONS = []
+
+[dependencies]
+lazy_static = "1.4.0"

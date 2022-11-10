@@ -1,0 +1,45 @@
+version: '3'
+
+silent: true
+
+tasks:
+
+  build:
+    desc: Builds in debug mode
+    cmds:
+      - cmd: cargo build
+
+  clean:
+    desc: Cleans all targets
+    cmds:
+      - cmd: cargo clean
+
+  doc:
+    desc: Generates documentation
+    cmds:
+      - cmd: cargo doc --no-deps
+
+  doc-open:
+    desc: Generates documentation and opens it in browser
+    cmds:
+      - cmd: cargo doc --no-deps --open
+
+  musl:
+    desc: Builds the Linux MUSL target
+    cmds:
+      - cmd: cargo build --release --target=x86_64-unknown-linux-musl
+
+  test:
+    desc: Runs tests in debug mode
+    cmds:
+      - cmd: cargo test
+
+  clippy:
+    desc: Runs clippy for all targets
+    cmds:
+      - cmd: cargo clippy --all-targets
+
+  fmt:
+    desc: Runs code formatter
+    cmds:
+      - cmd: cargo fmt
